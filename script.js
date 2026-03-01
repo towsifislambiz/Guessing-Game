@@ -57,15 +57,20 @@ buttonTwo.addEventListener("click",()=>{
           chance.innerHTML=   `Chance : ${count}`
 
         if(inputOne.value == inputTwo.value){
-            headingTwo.innerHTML="Player Two is Winner"
+             playerTwo.style.display="none"
             buttonTwo.style.display="none"
+            result.style.display="block"
+            showResult("Player Two is Winner ")
          }
          
         }else{
             count=0
                 chance.innerHTML=   `Chance : ${count}`
-            headingTwo.innerHTML="Player one is Winner"
+    playerTwo.style.display="none"
             buttonTwo.style.display="none"
+             result.style.display="block"
+showResult2("Player One is Winner")
+           
         }
 
 
@@ -85,3 +90,30 @@ eye.addEventListener("click",()=>{
 
     }
 })
+
+
+let result=document.querySelector(".result")
+
+   function showResult(m){
+              result.innerHTML=m;
+              result.classList.remove("result")
+              void result.offsetWidth;
+
+              result.classList.add("result")
+
+            }
+
+                  function showResult2(m2){
+              result.innerHTML=m2;
+              result.classList.remove("result")
+              void result.offsetWidth;
+
+              result.classList.add("result")
+
+            }
+
+
+
+
+
+
